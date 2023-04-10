@@ -1,5 +1,6 @@
 package com.example.producerbackend.services;
 
+import com.example.producerbackend.KafkaProducer;
 import com.example.producerbackend.repositories.MarkerRepository;
 import org.springframework.stereotype.Service;
 
@@ -11,8 +12,11 @@ import java.util.List;
 public class MarkerService {
   private final MarkerRepository markerRepository;
 
-  public MarkerService(MarkerRepository markerRepository) {
+  private final KafkaProducer kafkaProducer;
+
+  public MarkerService(MarkerRepository markerRepository, KafkaProducer kafkaProducer) {
     this.markerRepository = markerRepository;
+    this.kafkaProducer = kafkaProducer;
   }
 
   public List<Marker> getAllMarkers() {
@@ -21,10 +25,10 @@ public class MarkerService {
 
   public Marker addMarker(Marker marker) {
     if (markerRepository.findAll().size() <= marker.getMarkerId()) {
+      kafkaProducer.sendMarkerMessage(marker);
       return markerRepository.save(marker);
     } else {
       return null;
     }
   }
-
 }

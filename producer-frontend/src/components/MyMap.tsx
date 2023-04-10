@@ -67,7 +67,6 @@ export default function MyMap() {
         addNewLocationChange(locationChange);
         setPresent(true);
     }
-//TODO verwijder token
     if (isLoading) {
         return <div>Loading...</div>
     } else if (isError) {
@@ -120,8 +119,8 @@ export default function MyMap() {
                         })}
                         {selectedMarker &&
                             <Popup
-                                latitude={Math.round(parseFloat(selectedMarker.latitude) / 10000) * 10000}
-                                longitude={Math.round(parseFloat(selectedMarker.longitude) / 10000) * 10000}
+                                latitude={parseFloat(selectedMarker.latitude)}
+                                longitude={parseFloat(selectedMarker.longitude)}
                                 closeButton={true}
                                 closeOnClick={false}
                                 onClose={() => setSelectedMarker(null)}
