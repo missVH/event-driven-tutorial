@@ -96,7 +96,7 @@ export default function MyMap() {
             <div className="map-container">
                 <Box sx={{width: '100%', height: '100%'}}>
                     <ReactMapGL
-                        mapboxAccessToken={"pk.eyJ1IjoibGlzYXZoIiwiYSI6ImNsZWhhbThiazE5NzMzb212NWlrOGpvMHoifQ.aW6zBj7ym2naLpiTXJGwVw"}
+                        mapboxAccessToken={""}
                         initialViewState={{
                             longitude: 4.9,
                             latitude: 50.6,
