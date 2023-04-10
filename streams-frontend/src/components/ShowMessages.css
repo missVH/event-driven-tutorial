@@ -1,0 +1,37 @@
+#graph-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "averageTime mostVisited"
+        "popularTimes popularTimes";
+    column-gap: 20px;
+    row-gap: 20px;
+    margin: 20px 10px;
+}
+
+#averageTime {
+    grid-area: averageTime;
+}
+
+#mostVisited {
+    grid-area: mostVisited;
+}
+
+#popularTimes {
+    grid-area: popularTimes;
+}
+
+.grid-cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.myBar {
+    width: 100% !important;
+    height: 95% !important;
+}

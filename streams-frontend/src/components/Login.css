@@ -1,0 +1,30 @@
+#root .align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 60px;
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 75% !important;
+}
+
+.loginLogo {
+    max-height: 100px;
+    margin-bottom: 40px;
+}
+
+.signinButton {
+    width: 95%;
+    margin-left: 5px !important;
+}
+
+#newUser {
+    margin-top: 10px;
+}

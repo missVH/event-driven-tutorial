@@ -1,0 +1,14 @@
+#toolBar {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    gap: 70vw 20px;
+}
+
+.headerLogo {
+    max-width: 175px;
+}
+
+.loginButtonContainer {
+    display: inline-block;
+}
