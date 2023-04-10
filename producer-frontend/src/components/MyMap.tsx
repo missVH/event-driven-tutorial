@@ -67,7 +67,7 @@ export default function MyMap() {
         addNewLocationChange(locationChange);
         setPresent(true);
     }
-
+//TODO verwijder token
     if (isLoading) {
         return <div>Loading...</div>
     } else if (isError) {
