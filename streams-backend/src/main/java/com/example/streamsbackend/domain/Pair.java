@@ -1,8 +1,8 @@
 package com.example.streamsbackend.domain;
 
 public class Pair<K, V> {
-  private final K key;
-  private final V value;
+  private K key;
+  private V value;
 
   public Pair(K key, V value) {
     this.key = key;
@@ -15,6 +15,14 @@ public class Pair<K, V> {
 
   public V getValue() {
     return value;
+  }
+
+  public void setKey(K key) {
+    this.key = key;
+  }
+
+  public void setValue(V value) {
+    this.value = value;
   }
 
   @Override
